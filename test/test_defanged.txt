@@ -1,0 +1,4 @@
+hxxps://www[.]google[.]com
+hxxp://www[.]cnn[.]com
+8[.]8[.]8[.]8
+support[AT]cloudflare[.]com

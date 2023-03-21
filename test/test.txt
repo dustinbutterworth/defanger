@@ -1,0 +1,4 @@
+https://www.google.com
+http://www.cnn.com
+8.8.8.8
+support@cloudflare.com
