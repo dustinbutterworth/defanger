@@ -14,15 +14,13 @@ def defang_url(url: str) -> str:
 
 
 def defang_file(filename: Path):
-    infile = open(filename, 'r')
-    outfile_path = os.path.dirname(os.path.abspath(filename))
-    outfile = open(
-        f'{outfile_path}/{filename.stem}_defanged{filename.suffix}', "w")
-    for line in infile:
-        str = defang_url(line)
-        outfile.write(str)
-    outfile.close()
-    infile.close()
+    with open(filename, 'r') as infile:
+        outfile_path = os.path.dirname(os.path.abspath(filename))
+        with open(
+            f'{outfile_path}/{filename.stem}_defanged{filename.suffix}', "w") as outfile:
+                for line in infile:
+                    str = defang_url(line)
+                    outfile.write(str)
     print(f'Created new defanged version of {infile.name} at {outfile.name}')
 
 
